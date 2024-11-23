@@ -24,7 +24,8 @@ public class TempRestController {
     }
 
     @GetMapping("/exception")
-    public ApiResponse<TempResponse.TempExceptionDTO> exceptionAPI(@RequestParam Integer flag) {
+    public ApiResponse<TempResponse.TempExceptionDTO> exceptionAPI(
+            @RequestParam Integer flag) {
         tempQueryService.CheckFlag(flag);
         return ApiResponse.onSuccess(TempConverter.toTempExceptionDTO(flag));
     }
