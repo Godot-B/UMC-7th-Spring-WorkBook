@@ -15,6 +15,7 @@ import umc.study.repository.MemberRepository;
 import umc.study.web.dto.MemberRequestDTO;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
