@@ -7,12 +7,12 @@ import lombok.Getter;
 public class ReviewRequestDTO {
 
     @Getter
-    public static class WriteDTO {
+    public static class WriteReviewDTO {
 
-        @Size(min = 5, max = 12)
-        private String body;
+        @Size(min = 5, max = 50)
+        String body;
 
         @NotNull
-        private int score;
+        Integer score;
     }
 }

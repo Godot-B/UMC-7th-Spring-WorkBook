@@ -7,14 +7,14 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-public class ReviewResponseDTO {
+public class MissionResponseDTO {
 
     @Builder
     @Getter
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class WriteReviewResultDTO {
-        Long reviewId;
+    public static class WriteMissionResultDTO {
+        Long missionId;
         LocalDateTime createdAt;
     }
 }

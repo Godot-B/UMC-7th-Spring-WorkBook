@@ -6,14 +6,15 @@ import umc.study.web.dto.ReviewResponseDTO;
 
 public class ReviewConverter {
 
-    public static ReviewResponseDTO.WriteResultDTO toWriteResultDTO(Review review) {
+    public static ReviewResponseDTO.WriteReviewResultDTO toWriteReviewResultDTO(Review review) {
 
-        return ReviewResponseDTO.WriteResultDTO.builder()
+        return ReviewResponseDTO.WriteReviewResultDTO.builder()
                 .reviewId(review.getId())
+                .createdAt(review.getCreatedAt())
                 .build();
     }
 
-    public static Review toReview(ReviewRequestDTO.WriteDTO request) {
+    public static Review toReview(ReviewRequestDTO.WriteReviewDTO request) {
         float starScore = request.getScore() * 0.5f;
 
         return Review.builder()
