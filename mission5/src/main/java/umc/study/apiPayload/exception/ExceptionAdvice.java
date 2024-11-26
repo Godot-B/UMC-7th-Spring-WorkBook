@@ -17,7 +17,6 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import umc.study.apiPayload.ApiResponse;
 import umc.study.apiPayload.code.ErrorReasonDTO;
 import umc.study.apiPayload.code.status.ErrorStatus;
-import umc.study.apiPayload.exception.GeneralException;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

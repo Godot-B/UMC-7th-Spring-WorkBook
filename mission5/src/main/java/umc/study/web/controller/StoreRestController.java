@@ -2,6 +2,7 @@ package umc.study.web.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import umc.study.apiPayload.ApiResponse;
 import umc.study.converter.MissionConverter;
@@ -18,6 +19,7 @@ import umc.study.web.dto.ReviewResponseDTO;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/map/store")
+@Validated
 public class StoreRestController {
 
     private final StoreCommandService storeCommandService;

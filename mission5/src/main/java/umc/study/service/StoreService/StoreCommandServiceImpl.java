@@ -12,6 +12,7 @@ import umc.study.domain.Review;
 import umc.study.domain.Store;
 import umc.study.repository.MissionRepository;
 import umc.study.repository.ReviewRepository;
+import umc.study.validation.annotation.ExistStore;
 import umc.study.web.dto.MissionRequestDTO;
 import umc.study.web.dto.ReviewRequestDTO;
 
@@ -39,7 +40,7 @@ public class StoreCommandServiceImpl implements StoreCommandService {
 
     @Override
     @Transactional
-    public Mission createMission(Long storeId, MissionRequestDTO.WriteMissionDTO request) {
+    public Mission createMission(@ExistStore Long storeId, MissionRequestDTO.WriteMissionDTO request) {
 
         Store store = storeQueryService.findStore(storeId)
                 .orElseThrow(() -> new StoreHandler(ErrorStatus
