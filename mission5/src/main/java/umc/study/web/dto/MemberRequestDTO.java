@@ -4,10 +4,12 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
+import org.springframework.validation.annotation.Validated;
 import umc.study.validation.annotation.ExistCategories;
 
 import java.util.List;
 
+@Validated
 public class MemberRequestDTO {
 
     @Getter

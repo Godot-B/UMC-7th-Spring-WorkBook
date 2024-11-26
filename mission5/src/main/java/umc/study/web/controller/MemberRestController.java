@@ -15,12 +15,12 @@ import umc.study.web.dto.MemberResponseDTO;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/members")
+@RequestMapping("/")
 public class MemberRestController {
 
     private final MemberCommandService memberCommandService;
 
-    @PostMapping("/")
+    @PostMapping("/sign-up")
     public ApiResponse<MemberResponseDTO.JoinResultDTO> join(
             @RequestBody @Valid MemberRequestDTO.JoinDTO request) {
         Member member = memberCommandService.joinMember(request);
