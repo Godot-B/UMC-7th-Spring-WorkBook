@@ -30,6 +30,9 @@ public enum ErrorStatus implements BaseErrorCode {
     MISSION_ALREADY_CHALLENGING(HttpStatus.BAD_REQUEST, "MISSION4002", "이미 도전 중인 미션입니다."),
     MISSION_ALREADY_COMPLETE(HttpStatus.BAD_REQUEST, "MISSION4003", "이미 완료한 미션입니다."),
 
+    // 페이징 관련 에러
+    PAGE_NUM_NOT_NATURAL(HttpStatus.BAD_REQUEST, "PAGE4001", "페이지 번호는 1 이상이어야합니다."),
+
     // 예시,,,
     ARTICLE_NOT_FOUND(HttpStatus.NOT_FOUND, "ARTICLE4001", "게시글이 없습니다."),
 

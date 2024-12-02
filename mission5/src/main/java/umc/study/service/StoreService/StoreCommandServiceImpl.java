@@ -40,7 +40,7 @@ public class StoreCommandServiceImpl implements StoreCommandService {
 
     @Override
     @Transactional
-    public Mission createMission(@ExistStore Long storeId, MissionRequestDTO.WriteMissionDTO request) {
+    public Mission createMission(Long storeId, MissionRequestDTO.WriteMissionDTO request) {
 
         Store store = storeQueryService.findStore(storeId)
                 .orElseThrow(() -> new StoreHandler(ErrorStatus
